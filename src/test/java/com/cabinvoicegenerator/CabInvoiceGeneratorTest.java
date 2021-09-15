@@ -9,5 +9,6 @@ class CabInvoiceGeneratorTest {
     @Test
     public void toCalculate_Fare() {
         cabInvoiceGenerator.calculateFare();
+        cabInvoiceGenerator.calculateAggregateFare();
     }
 }

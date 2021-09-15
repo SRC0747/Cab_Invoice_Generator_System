@@ -76,6 +76,33 @@ public class CabInvoiceGenerator {
         }
         System.out.println(rideString);
     }
+    public static void rideCategory(){
+        Scanner sc= new Scanner(System.in);
+        double dis = 0,time = 0,cost = 0;
+        System.out.print("Enter a Rider Category: ");
+        String rider= sc.nextLine();
+        System.out.print("You have entered: "+rider);
+        if (rider == "Normal Rider"){
+            System.out.print("Enter the Distance in Killometer:");
+            double distance = sc.nextDouble();
+            System.out.print("Enter Time:");
+            double t = sc.nextDouble();
+            dis = (dis + distance*10);
+            time = (time + t*1);
+            cost = (cost + distance + t);
+            System.out.println("Total Cost is:"+cost);
+        }
+        if (rider == "Premium Rider"){
+            System.out.print("Enter the Distance in Killometer:");
+            double distance = sc.nextDouble();
+            System.out.print("Enter Time:");
+            double t = sc.nextDouble();
+            dis = (dis + distance*10);
+            time = (time + t*1);
+            cost = (cost + distance + t);
+            System.out.println("Total Cost is:"+cost);
+        }
+    }
     public static void main(String[] args){
         System.out.println("Welcome to Cab Invoice Generator problem.");
         CabInvoiceGenerator obj = new CabInvoiceGenerator();
@@ -83,5 +110,6 @@ public class CabInvoiceGenerator {
         obj.calculateAggregateFare();
         obj. displayEnhancedInvoice();
         obj.rideDetail();
+        obj.rideCategory();
     }
 }

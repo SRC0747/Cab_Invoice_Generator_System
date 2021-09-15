@@ -1,6 +1,7 @@
 package com.cabinvoicegenerator;
 
 import java.util.*;
+import java.util.Scanner;
 
 public class CabInvoiceGenerator {
     public static void calculateFare(){
@@ -50,11 +51,37 @@ public class CabInvoiceGenerator {
         int rides = sc.nextInt();
         System.out.println("Total no. of Rides:"+rides);
     }
+    public static void rideDetail(){
+        Scanner sc= new Scanner(System.in);
+        int UsrIn = sc.nextInt();
+        int userid = UsrIn;
+        String rideString;
+        switch(userid){
+            case 1:  rideString = "Jackson";
+                break;
+            case 2:  rideString = "Fedrez";
+                break;
+            case 3:  rideString = "Mark";
+                break;
+            case 4:  rideString = "Aryan";
+                break;
+            case 5:  rideString = "ZukenBerg";
+                break;
+            case 6:  rideString = "Lily";
+                break;
+            case 7:  rideString = "Mike";
+                break;
+            default: rideString = "Invalid Rider";
+                break;
+        }
+        System.out.println(rideString);
+    }
     public static void main(String[] args){
         System.out.println("Welcome to Cab Invoice Generator problem.");
         CabInvoiceGenerator obj = new CabInvoiceGenerator();
         obj.calculateFare();
         obj.calculateAggregateFare();
         obj. displayEnhancedInvoice();
+        obj.rideDetail();
     }
 }

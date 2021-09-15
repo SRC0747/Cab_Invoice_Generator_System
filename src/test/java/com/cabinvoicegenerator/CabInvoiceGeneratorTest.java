@@ -11,5 +11,6 @@ class CabInvoiceGeneratorTest {
         cabInvoiceGenerator.calculateFare();
         cabInvoiceGenerator.calculateAggregateFare();
         cabInvoiceGenerator. displayEnhancedInvoice();
+        cabInvoiceGenerator.rideDetail();
     }
 }
